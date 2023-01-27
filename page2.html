@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show</title>
+    <style>
+        table{
+            color: red;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body onload="show()">
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    UserName
+                </th>
+                <th>
+                    password
+                </th>
+                <th>
+                    email
+                </th>
+                <th>
+                    age
+                </th>
+                <th>
+                    gender
+                </th>
+                <th>
+                    address
+                </th>
+                <th>
+                    10th
+                </th>
+                <th>
+                    12th
+                </th>
+                <th>
+                    Degree
+                </th>
+                <th>
+                    University
+                </th>
+            </tr>
+        </thead>
+        <tbody id="Tbody">
+
+        </tbody>
+    </table>
+
+    <script>
+        var show = () =>{
+            var tableB = document.getElementById("Tbody");
+            tableB.innerHTML = `
+                <td>
+                    ${window.sessionStorage.getItem("name")}
+                </td>
+                <td>
+                    ${window.sessionStorage.getItem("password")}
+                </td>
+                <td>
+                    ${window.sessionStorage.getItem("email")}
+                </td>
+                <td>
+                    ${window.sessionStorage.getItem("age")}
+                </td>
+                <td>
+                    ${window.sessionStorage.getItem("gender")}
+                </td>
+                <td>
+                    ${window.sessionStorage.getItem("address")}
+                </td>
+                <td>
+                    ${window.sessionStorage.getItem("ssc")}
+                </td>
+                <td>
+                    ${window.sessionStorage.getItem("hsc")}
+                </td>
+                <td>
+                    ${window.sessionStorage.getItem("Degree")}
+                </td>
+                <td>
+                    ${window.sessionStorage.getItem("University")}
+                </td>
+            `
+        }
+    </script>
+
+</body>
+</html>
